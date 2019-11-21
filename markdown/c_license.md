@@ -1,0 +1,8 @@
+# Licenses for cluster nodes
+
+You must request and apply a license for each <madcap:variable name="axway_variables.Component Short Name"></madcap:variable> node before joining the nodes together in a cluster. Moreover, before replacing or updating the license for a node, you must remove the node from the cluster and rejoin the node only after the license has been replaced or updated. See the steps for requesting and applying a license for a single <madcap:variable name="axway_variables.Component Short Name"></madcap:variable> in <madcap:xref href="../installation/c_log_on_first_time.htm">Start and log on the first time</madcap:xref>.
+
+ If nodes already are clustered, which means the `server.xml` files have been updated to the cluster settings, you must restore the `server.xml` files to the default, non-clustered state and then license the nodes. A good approach is to save the default `server.xml` as `server.xml.original` on each node. However, if the default `server.xml` is not available, save a copy of the current `server.xml` as `server.xml.cluster` and remove the cluster settings from `server.xml`. Once restored to the default state, you can use it in the licensing procedure and save the file as `server.xml.original`. Then you can resume using `server.xml.cluster`.
+
+Stop <madcap:variable name="axway_variables.Component Short Name"></madcap:variable> before working on a `server.xml` file. The file is at `<install directory>/apache-tomcat-<version>/conf`.
+<madcap:relationshipsproxy></madcap:relationshipsproxy>
